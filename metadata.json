@@ -1,0 +1,6 @@
+{
+  "name": "Universal Invoice Generator",
+  "description": "Create. Customize. Invoice. A modern SaaS workspace for crafting professional invoices with live preview, customizable templates, and a digital signature & company seal studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

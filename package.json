@@ -1,0 +1,47 @@
+{
+  "name": "universal-invoice-generator",
+  "private": true,
+  "version": "0.9.0",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "tsx server.ts",
+    "start": "node dist-server/server.mjs",
+    "build:client": "vite build",
+    "build:server": "esbuild server.ts --bundle --platform=node --format=esm --packages=external --outfile=dist-server/server.mjs",
+    "build": "vite build && npm run build:server",
+    "preview": "vite preview",
+    "test": "tsx --test src/utils/calculations.test.ts src/utils/recurring.test.ts src/utils/authCookiePdf.test.ts server/server.test.ts",
+    "clean": "rm -rf dist dist-server server.js",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/nodemailer": "^8.0.2",
+    "@vitejs/plugin-react": "^6.1.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.7.4",
+    "helmet": "^8.3.0",
+    "jspdf": "^4.2.1",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "nodemailer": "^10.5.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.4.21",
+    "esbuild": "^0.25.0",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.21.0",
+    "typescript": "^7.0.2",
+    "@types/express": "^4.17.21"
+  }
+}
